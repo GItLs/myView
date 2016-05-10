@@ -58,7 +58,7 @@ public class mView extends View {
     }
 
     private void init() {
-        //初始化画笔
+        //初始化画笔并消除锯齿，设置相关属性
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(roundColor);
         paint.setStyle(Paint.Style.STROKE);
@@ -91,7 +91,6 @@ public class mView extends View {
             @Override
             public void run() {
                 while (sweepAngle <= max) {
-
                     num = (int) (sweepAngle / 360 * 100);
                     sweepAngle += 2;
                     postInvalidate();
