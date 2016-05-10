@@ -1,15 +1,14 @@
 # myView
-# 自定义环形进度条
+## 自定义环形进度条
 ## 1.基本用法
-<com.example.view_test.mView
+#####   <com.example.view_test.mView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:percent="80"
         app:textSize="50dp"/>
         
 ## 2.相关属性
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
+#####  <resources>
     <declare-styleable name="mView">
         //中间进度条的数字显示的字体大小
         <attr name="textSize" format="dimension"/>
