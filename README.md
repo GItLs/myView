@@ -1,5 +1,7 @@
 # myView
 ## 自定义环形进度条
+
+![img]{}
 ## 1.基本用法
 #####   <com.example.view_test.mView
         android:layout_width="match_parent"
