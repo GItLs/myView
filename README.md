@@ -1,7 +1,6 @@
 # myView
 ## 自定义环形进度条
-
-![img]{}
+ ![img](https://github.com/Lans/myView/blob/master/Screenshot_20160511-131231.png)
 ## 1.基本用法
 #####   <com.example.view_test.mView
         android:layout_width="match_parent"
