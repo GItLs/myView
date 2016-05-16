@@ -58,7 +58,7 @@ public class mView extends View {
     }
 
     private void init() {
-        //初始化画笔并消除锯齿，设置相关属性
+        //初始化画笔
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(roundColor);
         paint.setStyle(Paint.Style.STROKE);
@@ -91,6 +91,7 @@ public class mView extends View {
             @Override
             public void run() {
                 while (sweepAngle <= max) {
+
                     num = (int) (sweepAngle / 360 * 100);
                     sweepAngle += 2;
                     postInvalidate();
@@ -104,4 +105,13 @@ public class mView extends View {
         }).start();
     }
 
+    public void setProgress(float progress){
+        float pg = 10;
+        this.percent = progress;
+        if(progress > 100){
+            this.percent  = 100;
+        }
+        // 直接在线程中更新界面
+        postInvalidate();
+    }
 }
