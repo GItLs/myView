@@ -46,7 +46,7 @@ public class mView extends View {
         //获取属性的数组
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.mView);
         textSize = array.getDimension(R.styleable.mView_textSize, 12);
-        percent = array.getFloat(R.styleable.mView_percent, 50);
+        percent = array.getFloat(R.styleable.mView_percent, 0);
         roundColor = array.getColor(R.styleable.mView_roundColor, Color.YELLOW);
         proColor = array.getColor(R.styleable.mView_proColor, Color.RED);
         //回收数组资源
@@ -76,7 +76,7 @@ public class mView extends View {
         textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         textPaint.setColor(Color.DKGRAY);
         textPaint.setTextSize(textSize);
-
+		setPercent(percent);
         max = (float) (percent * 3.6);
     }
 
@@ -106,12 +106,12 @@ public class mView extends View {
     }
 
     public void setProgress(float progress){
-        float pg = 10;
+        //float pg = 10;
         this.percent = progress;
         if(progress > 100){
             this.percent  = 100;
         }
         // 直接在线程中更新界面
-        postInvalidate();
+       // postInvalidate();
     }
 }
